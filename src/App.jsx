@@ -28,10 +28,10 @@ import ChangePassword from "./pages/registration/ChangePassword";
 const App = () => {
   return (
     <MyState>
-      <Router>
+      <HashRouter>
         <ScrollTop />
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/*" element={<NoPage />} />
           <Route path="/productinfo/:id" element={<ProductInfo />} />
           <Route path="/cart" element={<CartPage />} />
@@ -68,7 +68,7 @@ const App = () => {
           } />
         </Routes>
         <Toaster/>
-      </Router>
+      </HashRouter>
     </MyState>
   )
 }
