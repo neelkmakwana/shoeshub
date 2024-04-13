@@ -2,6 +2,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
+  HashRouter,
 } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import NoPage from "./pages/noPage/NoPage";
@@ -27,6 +28,7 @@ import ChangePassword from "./pages/registration/ChangePassword";
 
 const App = () => {
   return (
+
     <MyState>
       <HashRouter>
         <ScrollTop />
