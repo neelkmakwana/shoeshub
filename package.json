@@ -1,5 +1,5 @@
 {
-  "homepage": "https://neelkmakwana.github.io/shoeshub/",
+ 
   "name": "nk-shoeshub",
   "private": true,
   "version": "0.0.0",
@@ -7,8 +7,7 @@
   "main": "dist/razorpay.js",
   "module": "dist/razorpay.es.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
