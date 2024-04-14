@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  HashRouter,
+  
 } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import NoPage from "./pages/noPage/NoPage";
@@ -30,7 +30,7 @@ const App = () => {
   return (
 
     <MyState>
-      <HashRouter>
+      <Router>
         <ScrollTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -70,7 +70,7 @@ const App = () => {
           } />
         </Routes>
         <Toaster/>
-      </HashRouter>
+      </Router>
     </MyState>
   )
 }
