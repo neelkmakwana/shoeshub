@@ -44,7 +44,22 @@ const SearchBar = () => {
    const [search, setSearch] = useState("");
 
    // Filter Search Data
-   const filterSearchData = getAllProduct.filter((obj) => obj.title.toLowerCase().includes(search)).slice(0, 8)
+   // Filter Search Data
+const filterSearchData = getAllProduct
+  .filter((obj) => {
+    // Convert the search string to lowercase and uppercase
+    const searchLower = search.toLowerCase();
+    const searchUpper = search.toUpperCase();
+    
+    // Convert the title to both lowercase and uppercase for matching
+    const titleLower = obj.title.toLowerCase();
+    const titleUpper = obj.title.toUpperCase();
+    
+    // Check if the search string is included in either the lowercase or uppercase title
+    return titleLower.includes(searchLower) || titleUpper.includes(searchUpper);
+  })
+  .slice(0, 8); // Get the first 8 results
+
 
    const navigate = useNavigate();
   return (
